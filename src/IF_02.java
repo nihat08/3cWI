@@ -14,10 +14,16 @@ public class IF_02 {
 
         // Wenn die erste Zahl kleiner ist als 30 oder die zweite Zahl kleiner ist als 30
         // dann gib aus "Eine der beiden ist kleiner als 30"
+        if (randomNumber1<30 || randomNumber2<30){
+            System.out.println("Eine der beiden ist kleiner als 30");
+        }
 
         // Wenn die erste Zahl kleiner ist als 50 UND die zweite Zahl ungleich 50 ist
         // dann gib aus "Erste Zahl klein, zweite kein 50iger"
-
-
+        if (randomNumber1<50 && randomNumber2!=50){
+            System.out.println("Erste Zahl klein, zweite kein 50iger");
+        }
+        System.out.println(randomNumber1);
+        System.out.println(randomNumber2);
     }
 }
