@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Switch1 {
+public class Switch_01 {
     public static void main(String[] args) {
         // Erstelle eine Zufallszahl zwischen 5 und 10
         Random random = new Random();
