@@ -12,13 +12,13 @@ public class Bankomat {
         Scanner scanner = new Scanner(System.in);
 
 
-        int Kontostand = 0;
-        System.out.println(Kontostand);
+        int balance = 0;
+        System.out.println(balance);
         boolean running = true;
 
-        while (running) {
+        while (true) {
             // Menü anzeigen
-            System.out.println("Willkommen beim Bankomat!");
+            System.out.println("Guten Tag!");
             System.out.println("Bitte wählen Sie eine Option:");
             System.out.println("1. Einzahlen");
             System.out.println("2. Abheben");
@@ -28,13 +28,24 @@ public class Bankomat {
 
         switch(auswahl) {
             case 1:
-                System.out.println("Wie viel möchten Sie einzahlen?");
-                int Einzahlen = scanner.nextInt();
-                if (Einzahlen>0){
-                    Kontostand+=Einzahlen;
-                    System.out.println(Einzahlen + "€ wurden eingezahlt");
+                System.out.println("Wie viel € möchten Sie einzahlen?");
+                int deposit = scanner.nextInt();
+                if (deposit >0){
+                    balance += deposit;
+                    System.out.println(deposit + "€ wurden eingezahlt");
                 }
-
+                break;
+            case 2:
+                System.out.println("Wie viel € möchten Sie abheben?");
+                int withdraw = scanner.nextInt();
+                if (withdraw> balance){
+                    System.out.println("Kontostand zu niedrig");
+                }else {
+                    System.out.println(withdraw + "€ wurden abgehoben");
+                }
+                break;
+            case 3:
+                System.out.println("Wie viel € haben Sie auf dem Konto");
 
         }
         }
