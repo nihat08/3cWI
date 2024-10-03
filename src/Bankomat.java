@@ -40,12 +40,17 @@ public class Bankomat {
                 int withdraw = scanner.nextInt();
                 if (withdraw> balance){
                     System.out.println("Kontostand zu niedrig");
-                }else {
+                }else if (withdraw>0){
+                    balance -= withdraw;
                     System.out.println(withdraw + "€ wurden abgehoben");
                 }
                 break;
             case 3:
-                System.out.println("Wie viel € haben Sie auf dem Konto");
+                System.out.println("Sie haben " + balance + "€ auf dem Konto");
+                break;
+            case 4:
+
+
 
         }
         }
