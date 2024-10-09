@@ -11,9 +11,10 @@ public class Wuerfelspiel {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
 
-        boolean running = false;
+        boolean running = true;
 
-        while (!running) {
+        while (running) {
+            System.out.println("===Menu===");
             System.out.println("1. Play");
             System.out.println("2. End");
             int auswahl = (scanner.nextInt());
@@ -21,17 +22,34 @@ public class Wuerfelspiel {
             switch (auswahl) {
                 case 1:
                     System.out.println("Game Started");
-                    int randomNumber1 = random.nextInt(1, 7);
-                    int randomNumber2 = random.nextInt(1, 7);
-                    System.out.println("You: " + randomNumber1);
-                    System.out.println("Bot: " + randomNumber2);
-                    if (randomNumber1 < randomNumber2) {
+
+                    int playerSum = 0;
+                    int botSum = 0;
+
+                    for (int i = 1; i <= 7; i++) {
+                        int randomNumber1 = random.nextInt(1, 7);
+                        int randomNumber2 = random.nextInt(1, 7);
+
+                        System.out.println("You: " + randomNumber1);
+                        System.out.println("Bot: " + randomNumber2);
+
+                        playerSum += randomNumber1;
+                        botSum += randomNumber2;
+                    }
+                    System.out.println("Your sum: " + playerSum);
+                    System.out.println("Bot's sum: " + botSum);
+
+                    if (playerSum < botSum) {
                         System.out.println("You lose...");
-                    } else if (randomNumber1 > randomNumber2) {
+                    } else if (playerSum > botSum) {
                         System.out.println("You win!");
                     } else {
                         System.out.println("Draw...");
                     }
+                    break;
+                case 2:
+                    System.out.println("Game Ended ._.");
+                    running = false;
                     break;
 
             }
