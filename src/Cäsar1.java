@@ -1,4 +1,4 @@
-public class Cäsar {
+public class Cäsar1 {
     public static String encrypt(String text, int shift) {
         StringBuilder result = new StringBuilder();
 

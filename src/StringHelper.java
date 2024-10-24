@@ -8,26 +8,42 @@ public class StringHelper {
             System.out.println("false");
         }
         //count
-        //int amount = countLetters("andreas", "a");
-        //System.out.println(amount);
-
+        System.out.println(countLetters("andread", 'a'));
         //reverse
-        String rev = revString("hello");
+        String rev = revString("leined lol");
 
         //amount
-        int amountOfLetters = getAmountOfLetters("sepp");
+        int amountOfLetters = getAmountOfLetters("fünf");
     }
+
     public static boolean isPalindrome(String word) {
         String reverse = new StringBuilder(word).reverse().toString();
         return word.equals(reverse);
     }
+
     public static int countLetters(String word, char c) {
-        return 7;
+        int count = 0;
+            for (int i = 0; i <word.length() ; i++) {
+            if (word.charAt(i) == c){
+                count++;
+            }
+        }
+        return count;
     }
+
     public static String revString(String word) {
-        return "olleh";
+        for (int i = word.length() -1; i>=0; i--) {
+            System.out.print(word.charAt(i));
+
+        }
+        return word;
     }
+
     public static int getAmountOfLetters(String word) {
-        return 5;
+        int length = word.length();
+        System.out.println(length);
+        return length;
     }
-}
+
+    }
+
