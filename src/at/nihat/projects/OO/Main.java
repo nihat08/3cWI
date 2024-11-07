@@ -1,9 +1,9 @@
 package at.nihat.projects.OO;
 
-public class OO2_FirstCar {
+public class Main {
     public static void main(String[] args) {
         int a = 7;
-
+    /*
         Car c1 = new Car();
         c1.brand = "Audi";
         c1.fuelConsumption = 7;
@@ -21,7 +21,11 @@ public class OO2_FirstCar {
         c2.fuelMaxAmount = 100;
         c2.speed = 45;
         c2.BreakSpeed = 5;
+    */
+        Car c3 = new Car(17, "Opel", "A1234");
 
+
+        /*
         System.out.println(c2.fuelAmount);
         c2.drive();
         System.out.println(c2.fuelAmount);
@@ -35,7 +39,8 @@ public class OO2_FirstCar {
         c1.breakk();
         System.out.println(c1.speed);
         c2.breakk();
+        */
+    }
     }
 
-    }
 

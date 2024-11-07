@@ -12,6 +12,12 @@ public class Car {
         public int BreakSpeed;
         private String color;
 
+        public Car (int fuelConsumption, String brand, String serialNumber){
+            this.fuelConsumption = fuelConsumption;
+            this.brand = brand;
+            this.serialNumber = serialNumber;
+        }
+
         //Methode
         public void drive(){
             this.fuelAmount = this.fuelAmount - this.fuelConsumption;
