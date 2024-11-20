@@ -1,5 +1,8 @@
 package at.nihat.projects.OO;
 
+import static at.nihat.projects.OO.Engine.TYPE.Diesel;
+import static at.nihat.projects.OO.Engine.TYPE.Gas;
+
 public class Main {
     public static void main(String[] args) {
         int a = 7;
@@ -10,7 +13,6 @@ public class Main {
         c1.setSerialNumber("A1234");
         c1.setFuelAmount(70);
         c1.setFuelMaxAmount(100);
-        c1.setSpeed(50);
         c1.setBreakSpeed(5);
 
         Car c2 = new Car();
@@ -19,10 +21,22 @@ public class Main {
         c2.setSerialNumber("B1234");
         c2.setFuelAmount(20);
         c2.setFuelMaxAmount(100);
-        c2.setSpeed(45);
         c2.setBreakSpeed(5);
 
+        Engine ec1 = new Engine(187, Diesel, 200);
+        System.out.println(ec1.getFuelCap());
+        ec1.setFuelCap(50);
+        System.out.println(ec1.getFuelCap());
 
+        RearMirror m1 = new RearMirror(100, -5);
+        RearMirror m2 = new RearMirror(85, 10);
+        RearMirror m3 = new RearMirror(85, -10);
+
+        c1.addMirror(m1);
+        c2.addMirror(m2);
+        c2.addMirror(m3);
+
+        System.out.println("Mirror:" + c1.getMirrors().get(0).getPosition());
 
 
         System.out.println(c2.getFuelAmount());
