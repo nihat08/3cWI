@@ -14,7 +14,6 @@ public class Main {
         c1.setFuelAmount(70);
         c1.setFuelMaxAmount(100);
         c1.setBreakSpeed(5);
-
         Car c2 = new Car();
         c2.setBrand("BMW");
         c2.setFuelConsumption(7);
@@ -31,13 +30,14 @@ public class Main {
         RearMirror m1 = new RearMirror(100, -5);
         RearMirror m2 = new RearMirror(85, 10);
         RearMirror m3 = new RearMirror(85, -10);
-
         c1.addMirror(m1);
         c2.addMirror(m2);
         c2.addMirror(m3);
+        System.out.println("Mirror Position: " + c2.getMirrors().get(0).getPosition());
 
-        System.out.println("Mirror:" + c1.getMirrors().get(0).getPosition());
-
+        Tires t1 = new Tires(21, "summer", 4);
+        c1.addTires(t1);
+        System.out.println("Tire size: " + c1.getTires().get(0).getSize());
 
         System.out.println(c2.getFuelAmount());
         c2.getDrive();
@@ -52,7 +52,6 @@ public class Main {
         c1.getBreakk();
         System.out.println(c1.getSpeed());
         c2.getBreakk();
-
 
 
     }

@@ -7,6 +7,7 @@ public class Car {
     //Instanz/Gedächnis
     //dont do that later
     private List<RearMirror> mirrors = new ArrayList<>();
+    private List<Tires> tires = new ArrayList<>();
     private int fuelMaxAmount;
     private int fuelAmount;
     private int fuelConsumption;
@@ -23,6 +24,7 @@ public class Car {
         this.fuelMaxAmount = 100;
         this.fuelConsumption = 7;
         this.mirrors = new ArrayList<>();
+        this.tires = new ArrayList<>();
 
     }
 
@@ -34,6 +36,10 @@ public class Car {
         this.mirrors.add(rearMirror);
     }
 
+    public void addTires(Tires tires) {
+        this.tires.add(tires);
+    }
+
     //Methode
 
 
@@ -41,8 +47,16 @@ public class Car {
         return mirrors;
     }
 
+    public List<Tires> getTires() {
+        return tires;
+    }
+
     public void setMirrors(List<RearMirror> mirrors) {
         this.mirrors = mirrors;
+    }
+
+    public void setTires(List<Tires> tires) {
+        this.tires = tires;
     }
 
     public void getDrive() {
