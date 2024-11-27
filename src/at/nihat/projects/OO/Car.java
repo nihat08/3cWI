@@ -8,23 +8,27 @@ public class Car {
     //dont do that later
     private List<RearMirror> mirrors = new ArrayList<>();
     private List<Tires> tires = new ArrayList<>();
-    private int fuelMaxAmount;
+    private Engine engine;
     private int fuelAmount;
     private int fuelConsumption;
+    private int fuelMaxAmount;
     private String brand;
     private String serialNumber;
     private int speed;
     private int BreakSpeed;
     private String color;
 
-    public Car(int fuelConsumption, String brand, String serialNumber) {
-        this.fuelConsumption = fuelConsumption;
+    public Car(int fuelMaxAmount, int fuelAmount, int fuelConsumption, String brand, String serialNumber, String color, Engine engine) {
+
+        this.fuelMaxAmount = fuelMaxAmount;
+        this.fuelConsumption = 7;
         this.brand = brand;
         this.serialNumber = serialNumber;
-        this.fuelMaxAmount = 100;
-        this.fuelConsumption = 7;
+        this.fuelAmount = fuelAmount;
+        this.color = color;
         this.mirrors = new ArrayList<>();
         this.tires = new ArrayList<>();
+        this.engine = engine;
 
     }
 
@@ -70,7 +74,7 @@ public class Car {
     }
 
     public void getTurboBoost() {
-        if (fuelAmount > fuelMaxAmount * 0.10) {
+        if (fuelAmount > 50) {
             System.out.println("SuperBoostMode");
         } else {
             System.out.println("Not enough fuel to go to Superboost");
@@ -112,10 +116,6 @@ public class Car {
         this.fuelConsumption = fuelConsumption;
     }
 
-    public void setFuelMaxAmount(int fuelMaxAmount) {
-        this.fuelMaxAmount = fuelMaxAmount;
-    }
-
     public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
@@ -126,10 +126,6 @@ public class Car {
 
     public int getFuelConsumption() {
         return fuelConsumption;
-    }
-
-    public int getFuelMaxAmount() {
-        return fuelMaxAmount;
     }
 
     public String getBrand() {
@@ -150,5 +146,21 @@ public class Car {
 
     public String getColor() {
         return color;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public int getFuelMaxAmount() {
+        return fuelMaxAmount;
+    }
+
+    public void setFuelMaxAmount(int fuelMaxAmount) {
+        this.fuelMaxAmount = fuelMaxAmount;
     }
 }

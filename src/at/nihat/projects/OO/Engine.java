@@ -4,12 +4,10 @@ public class Engine {
     public enum TYPE{Diesel, Gas};
     private int HorsePower;
     private TYPE type;
-    private int FuelCap;
 
-    public Engine(int HorsePower, TYPE type, int FuelCap){
+    public Engine(int HorsePower, TYPE type){
         this.HorsePower = HorsePower;
         this.type = type;
-        this.FuelCap = FuelCap;
     }
 
     public void drive(int amount) {
@@ -24,14 +22,6 @@ public class Engine {
         return type;
     }
 
-    public int getFuelCap() {
-        if (FuelCap > 100) {
-            this.FuelCap = 100;
-        } else {
-            this.FuelCap = FuelCap;
-        }
-        return FuelCap;
-    }
 
     public void setHorsePower(int horsePower) {
         HorsePower = horsePower;
@@ -41,10 +31,6 @@ public class Engine {
         this.type = type;
     }
 
-    public void setFuelCap(int fuelCap) {
-
-        FuelCap = fuelCap;
-    }
 
 
 
