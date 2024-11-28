@@ -14,25 +14,6 @@ public class Main {
         System.out.println(c1.getEngine().getHorsePower());
         System.out.println(c2.getEngine().getHorsePower());
 
-
-
-
-       /* c1.setBrand("Audi");
-        c1.setFuelConsumption(7);
-        c1.setSerialNumber("A1234");
-        c1.setFuelAmount(70);
-        c1.setFuelCapacity(100);
-        c1.setBreakSpeed(5);
-        Car c2 = new Car();
-        c2.setBrand("BMW");
-        c2.setFuelConsumption(7);
-        c2.setSerialNumber("B1234");
-        c2.setFuelAmount(20);
-        c2.setFuelCapacity(100);
-        c2.setBreakSpeed(5);
-
-
-
         RearMirror m1 = new RearMirror(100, -5);
         RearMirror m2 = new RearMirror(85, 10);
         RearMirror m3 = new RearMirror(85, -10);
@@ -45,8 +26,6 @@ public class Main {
         c1.addTires(t1);
         System.out.println("Tire size: " + c1.getTires().get(0).getSize());
 
-
-
         c1.getTurboBoost();
         c2.getTurboBoost();
 
@@ -56,9 +35,6 @@ public class Main {
         c1.getBreakk();
         System.out.println(c1.getSpeed());
         c2.getBreakk();
-
-*/
-    }
-    }
+    }}
 
 
