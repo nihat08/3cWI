@@ -4,17 +4,27 @@ public class Car {
     private String color;
     private int maxSpeed;
     private int price;
-    private int consumption;
+    private double consumption;
+    private int mileage;
     private Engine engine;
     private Seller seller;
 
-    public Car(String color, int maxSpeed, int price, int consumption, Engine engine, Seller seller){
+    public Car(String color, int maxSpeed, int price, int mileage, int consumption, Engine engine, Seller seller){
         this.color = color;
         this.maxSpeed = maxSpeed;
         this.price = price;
+        this.mileage = mileage;
         this.consumption = consumption;
         this.engine = engine;
         this.seller = seller;
+    }
+
+    public int getMileage() {
+        return mileage;
+    }
+
+    public void setMileage(int mileage) {
+        this.mileage=mileage;
     }
 
     public Seller getSeller() {
@@ -42,11 +52,16 @@ public class Car {
     }
 
     public int getPrice() {
-        return price;
+        int discountPrice = (int) (this.price * (1 - (this.seller.getDiscount() /100.0)));
+        return discountPrice;
     }
 
-    public int getConsumption() {
-        return consumption;
+    public double getConsumption() {
+        if (mileage > 50000) {
+            return (consumption * 1.098);
+        } else {
+            return consumption;
+        }
     }
 
     public void setColor(String color) {
@@ -62,7 +77,11 @@ public class Car {
     }
 
     public void setConsumption(int consumption) {
-        this.consumption = consumption;
+        if (mileage>50000) {
+            System.out.println(consumption * 1.098);
+        } else {
+            this.consumption=consumption;
+        }
     }
 }
 
