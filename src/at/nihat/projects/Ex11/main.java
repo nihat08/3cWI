@@ -30,6 +30,8 @@ public class main {
         d1.addCars(c2);
         d1.printCars();
 
+        t1.drive();
+        t1.stop();
         System.out.println(t1.getTrailer());
 
         System.out.println("F" + d1.cars);

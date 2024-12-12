@@ -18,7 +18,8 @@ public class Car {
     private int BreakSpeed;
     private String color;
 
-    public Car(int fuelMaxAmount, int fuelAmount, int fuelConsumption, String brand, String serialNumber, String color, Engine engine) {
+    public Car(int fuelMaxAmount, int fuelAmount, int fuelConsumption, String brand, String serialNumber,
+               String color, Engine engine) {
 
         this.fuelMaxAmount = fuelMaxAmount;
         this.fuelConsumption = 7;
