@@ -1,7 +1,5 @@
 package at.nihat.projects.Ex11;
 
-import java.sql.Driver;
-
 public class main {
     public static void main(String[] args) {
 
@@ -14,7 +12,7 @@ public class main {
 
         Seller s1 = new Seller("audi", "Michael", "Germany", 8);
         Seller s2 = new Seller("BMW", "Albert", "Austria", 3);
-        Seller s3 = new Seller("Toyota", "Yu Ming", "Japan", 7);
+        Seller s3 = new Seller("MAN", "Yu Ming", "Japan", 7);
 
         Truck t1 = new Truck("black", "Trailer 1", 155, 75000,
                 100000, 13, e2, s3);
@@ -24,7 +22,7 @@ public class main {
 
         Formula1 f1 = new Formula1("red", 300, 100000, e2, s1);
 
-        driver d1 = new driver("michi", 28);
+        Driver d1 = new Driver("michi", 28);
 
 
 
@@ -36,6 +34,8 @@ public class main {
         d1.addCars(c1);
         d1.addCars(c2);
         d1.printCars();
+
+        System.out.println(t1);
         /*System.out.println("consumption:" + c1.getConsumption());
         System.out.println(c1.getEngine().getType());
         System.out.println(c1.getSeller().getDiscount());

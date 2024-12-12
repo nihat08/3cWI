@@ -3,12 +3,12 @@ package at.nihat.projects.Ex11;
 import java.util.ArrayList;
 import java.util.List;
 
-public class driver {
+public class Driver {
     public List<Car> cars = new ArrayList<Car>();
     private String name;
     private int age;
 
-    public driver(String name, int age){
+    public Driver(String name, int age){
         this.age = age;
         this.name = name;
     }
