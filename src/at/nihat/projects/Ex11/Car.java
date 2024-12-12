@@ -89,5 +89,10 @@ public class Car {
     public void stop(){
         System.out.println("I am stopping ............ car");
     }
+
+    @Override
+    public String toString() {
+        return this.seller.getBrand() + " - " + this.seller.getName() + " m:" + this.mileage;
+    }
 }
 

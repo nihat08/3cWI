@@ -13,6 +13,10 @@ public class driver {
         this.name = name;
     }
 
+    public String toString(){
+        return age + "\n" + name + "\n" + cars;
+    }
+
     public List<Car> getCars() {
         return cars;
     }
@@ -42,7 +46,7 @@ public class driver {
     }
 
     public void printCars(){
-        System.out.println(name + " owns this cars");
+        System.out.println(name + " owns these cars");
         for (Car car : cars) {
             System.out.println(car);
         }

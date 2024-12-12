@@ -26,16 +26,17 @@ public class main {
 
         driver d1 = new driver("michi", 28);
 
+
+
+        /*t1.drive();
+        t1.stop();
+        System.out.println(t1.getTrailer());
+*/
+        System.out.println(d1);
         d1.addCars(c1);
         d1.addCars(c2);
         d1.printCars();
-
-        t1.drive();
-        t1.stop();
-        System.out.println(t1.getTrailer());
-
-        System.out.println("F" + d1.cars);
-        System.out.println("consumption:" + c1.getConsumption());
+        /*System.out.println("consumption:" + c1.getConsumption());
         System.out.println(c1.getEngine().getType());
         System.out.println(c1.getSeller().getDiscount());
         System.out.println("price:" + c1.getPrice());
@@ -50,6 +51,6 @@ public class main {
         lamp.printNamesOfLightElements();
         lamp.turnAllOn();
         System.out.println("PowerUsage insg.: " + lamp.getOverallPowerUsage());
-
+        */
     }
 }
