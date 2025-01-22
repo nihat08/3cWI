@@ -92,7 +92,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return this.seller.getBrand() + " - " + this.seller.getName() + " m:" + this.mileage;
+        return this.seller.getBrand() + " - " + "seller: " + this.seller.getName() + " m:" + this.mileage;
     }
 }
 

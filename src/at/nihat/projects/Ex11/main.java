@@ -34,7 +34,7 @@ public class main {
         d1.addCars(c1);
         d1.addCars(c2);
         d1.printCars();
-
+        System.out.println("x");
         System.out.println(t1);
         /*System.out.println("consumption:" + c1.getConsumption());
         System.out.println(c1.getEngine().getType());
